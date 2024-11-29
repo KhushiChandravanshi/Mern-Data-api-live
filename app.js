@@ -26,13 +26,13 @@ app.get('/collection', async (req, res) => {
     let query = {};
     let collection = "collection";
     let authKey = req.headers['x-access-auth']
-    if(authKey == key){
+    // if(authKey == key){
         let output = await getData(collection, query);
         res.status(200).send(output);
-    }else{
-        res.status(400).send(`unauthorized`);
-    }
-});
+    // }else{
+    //     res.status(400).send(`unauthorized`);
+    // }
+})
 
 // categoryType
 app.get('/categoryType', async (req, res) => {
