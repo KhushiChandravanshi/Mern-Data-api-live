@@ -25,7 +25,7 @@ app.get('/health', (req, res) => { // corrected this line
 app.get('/collection', async (req, res) => {
     let query = {};
     let collection = "collection";
-    let authKey = req.headers['x-access-auth']
+    // let authKey = req.headers['x-access-auth']
     // if(authKey == key){
         let output = await getData(collection, query);
         res.status(200).send(output);
